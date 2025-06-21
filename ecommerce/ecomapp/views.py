@@ -226,3 +226,7 @@ def logouts(request):
     logout(request)
     messages.warning(request,"Logout Success")
     return render(request,'login.html')
+
+def product_list(request):
+    products = Product.objects.all()
+    return render(request, 'product_list.html', {'products': products})

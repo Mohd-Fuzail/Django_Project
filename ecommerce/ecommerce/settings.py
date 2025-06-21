@@ -26,7 +26,7 @@ SECRET_KEY = '3gg^6dr*3*ta+qt3ql42dj&y#ehv^n_2g6-ty%0pm_s-ij#p1@'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ['.onrender.com','127.0.0.1']
 
 # Application definition
 

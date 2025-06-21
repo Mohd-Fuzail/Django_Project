@@ -8,21 +8,21 @@
   <title>{% block title %}
   {% endblock title %}</title>
 
-<style>
 {% block style %}
 {% endblock style %}
-</style>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet"> -->
 
   <!-- Vendor CSS Files -->
-  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="static/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  {% load static %}
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="static/assets/css/style.css" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+ 
 
  
 </head>
@@ -77,9 +77,12 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
       <h1 class="mb-4 pb-0">ECOMMERCE ONLINE STORE</span> </h1>
       <p class="mb-4 pb-0">10% Cash Back for All Products </p>
     
-      <a href="/agroproducts" class="about-btn scrollto">View PRODUCTS</a>
+     
+      <a href="{% url 'product_list' %}" class="about-btn scrollto">View PRODUCTS</a>
     </div>
-  </section><!-- End Intro Section -->
+  </section>
+  
+  <!-- End Intro Section -->
   <main id="main">
 
 
